@@ -37,7 +37,14 @@ function App() {
       path: '/', element: <Mainlayout />,
       children: [
         { index: true, element: <Login /> },
-        { path:"/ecommerce-react-app", element: <Home /> },
+        {
+          path: "/ecommerce-react-app", element:
+            <ProtectedRoute>
+              <WishContextProvider>
+                <Home />
+              </WishContextProvider>
+            </ProtectedRoute>
+        },
 
         {
           path: '/home', element:
@@ -107,7 +114,7 @@ function App() {
         { path: '/categories', element: <ProtectedRoute><Categories /></ProtectedRoute> },
         { path: '/brands', element: <ProtectedRoute><Brands /></ProtectedRoute> },
         { path: '/allorders', element: <ProtectedRoute><Allorders /></ProtectedRoute> },
-        
+
         { path: '/account-recovery', element: <Recovery /> },
         { path: '/login', element: <Login /> },
         { path: '/register', element: <Register /> },
