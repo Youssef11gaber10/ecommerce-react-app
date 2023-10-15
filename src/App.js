@@ -32,33 +32,12 @@ import ProductBrand from './Components/Brands/ProductBrand';
 
 function App() {
 
-  // *this for how can i wrap all app or some page
-  // const routes = createBrowserRouter([
-  //   {
-  //     path: '/', element: <AuthProvider><Mainlayout /></AuthProvider>,
-  //     children: [
-  //       { index: true, element: <Home /> },
-  //       { path: '/home', element: <Home /> },
-
-  //       { path: '/cart', element: <Cart /> },
-  //       { path: '/products', element: <Products /> },
-  //       { path: '/profile', element:<AuthProvider><Profile/></AuthProvider>},
-  //       { path: '/categories', element: <Categories /> },
-  //       { path: '/details/:id', element: <Proddetails /> },
-  //       {  path: '/login', element: <Login />},
-  //       { path: '/register', element: <Register /> },
-  //       { path: '/brands', element: <Brands /> },
-  //     ]
-  //   },
-  //   { path: '*', element: <Notfound /> }
-
-
-  // ])
   const routes = createBrowserRouter([
     {
       path: '/', element: <Mainlayout />,
       children: [
         { index: true, element: <Login /> },
+        { path:"/ecommerce-react-app", element: <Home /> },
 
         {
           path: '/home', element:
